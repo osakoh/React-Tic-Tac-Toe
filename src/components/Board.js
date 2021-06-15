@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 const Board = ({ squares, onClick }) => {
   return (
-    <div>
+    <div style={style}>
       <Square value='1' onClick={() => onClick("working")} />
       <Square value='2' onClick={() => onClick("working")} />
       <Square value='3' onClick={() => onClick("working")} />
@@ -16,6 +16,16 @@ const Board = ({ squares, onClick }) => {
       <Square value='9' onClick={() => onClick("working")} />
     </div>
   );
+};
+
+const style = {
+  border: "4px solid black",
+  borderRadius: "20px",
+  width: "300px",
+  height: "300px",
+  margin: "auto",
+  display: "grid",
+  gridTemplate: "repeat(3, 1fr)/repeat(3, 1fr)",
 };
 
 Board.propTypes = {

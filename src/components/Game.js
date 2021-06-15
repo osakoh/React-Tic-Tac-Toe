@@ -14,7 +14,7 @@ const Game = () => {
   const renderMoves = () => {};
 
   return (
-    <div>
+    <div style={{ margin: "15%" }}>
       <Board onClick={handleClick} />
     </div>
   );
