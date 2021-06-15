@@ -26,7 +26,7 @@ const style = {
 
 Square.propTypes = {
   onClick: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired,
+  value: PropTypes.string,
 };
 
 export default Square;
