@@ -17,6 +17,9 @@ export const calculateWinner = (squares) => {
     // then the first value wins; otherwise return null
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
       return squares[a];
+      // check for a draw
+    } else if (!squares.includes(null)) {
+      return "draw";
     }
   }
   return null;

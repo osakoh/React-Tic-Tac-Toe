@@ -42,7 +42,12 @@ const Game = () => {
 
       <div style={{ width: "200px", margin: "20px auto" }}>
         <p>
-          {winner ? `Winner: ${winner}` : `Next Player: ${xIsNext ? "X" : 0}`}
+          {/* {winner ? `Winner: ${winner}` : `Next Player: ${xIsNext ? "X" : 0}`} */}
+          {winner === "draw"
+            ? "No winner, it's a draw"
+            : winner
+            ? `Winner: ${winner}`
+            : `Next Player: ${xIsNext ? "X" : 0}`}
         </p>
         <p> {renderMoves()}</p>
       </div>
