@@ -19,7 +19,7 @@ const Board = ({ squares, onClick }) => {
 };
 
 Board.propTypes = {
-  squares: PropTypes.array.isRequired,
+  squares: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
 };
 
