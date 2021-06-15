@@ -5,15 +5,9 @@ import PropTypes from "prop-types";
 const Board = ({ squares, onClick }) => {
   return (
     <div style={style}>
-      <Square value='1' onClick={() => onClick("working")} />
-      <Square value='2' onClick={() => onClick("working")} />
-      <Square value='3' onClick={() => onClick("working")} />
-      <Square value='4' onClick={() => onClick("working")} />
-      <Square value='5' onClick={() => onClick("working")} />
-      <Square value='6' onClick={() => onClick("working")} />
-      <Square value='7' onClick={() => onClick("working")} />
-      <Square value='8' onClick={() => onClick("working")} />
-      <Square value='9' onClick={() => onClick("working")} />
+      {squares.map((square, idx) => (
+        <Square key={idx} value={square} onClick={() => onClick(idx)} />
+      ))}
     </div>
   );
 };
@@ -29,7 +23,7 @@ const style = {
 };
 
 Board.propTypes = {
-  squares: PropTypes.string.isRequired,
+  squares: PropTypes.array,
   onClick: PropTypes.func.isRequired,
 };
 
