@@ -21,14 +21,31 @@ const Game = () => {
   };
 
   // jumpto function
-  const jumpTo = () => {};
+  //   const jumpTo = () => {};
 
-  // rendermoves function
-  const renderMoves = () => {};
+  // rendermoves function to reset the game
+  const renderMoves = () => {
+    return (
+      <button
+        onClick={() => {
+          setBoard(Array(9).fill(null));
+        }}
+      >
+        Reset Game
+      </button>
+    );
+  };
 
   return (
     <div style={{ margin: "15%" }}>
       <Board squares={board} onClick={handleClick} />
+
+      <div style={{ width: "200px", margin: "20px auto" }}>
+        <p>
+          {winner ? `Winner: ${winner}` : `Next Player: ${xIsNext ? "X" : 0}`}
+        </p>
+        <p> {renderMoves()}</p>
+      </div>
     </div>
   );
 };
