@@ -22,4 +22,6 @@ export const calculateWinner = (squares) => {
   return null;
 };
 
-const squares = [null, null, null, "X", "X", "0", null, null, null];
+const squares = ["O", null, null, null, "O", "O", null, null, "O"];
+
+// console.log(calculateWinner(squares));
